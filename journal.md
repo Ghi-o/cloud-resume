@@ -19,7 +19,7 @@ Solutions:
 - Matching S3 bucket name to domain prevents misconfigurations with Route 53.
 - Double check endpoints are pointed correectly in all services.
 
-## Day 2: Deployig Resume in New S3 bucket.
+## Day 2: Deploying Resume in New S3 bucket.
 
 ✅ What I Did:
 
