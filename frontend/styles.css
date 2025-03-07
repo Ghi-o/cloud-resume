@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  color: #2c3e50;
+}
+h2 {
+  color: #2980b9;
+}
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
