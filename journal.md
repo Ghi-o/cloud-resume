@@ -40,6 +40,7 @@ Now I will create a CloudFront distribution to use the Certificate for DNS valid
 - I can access my website through a cloudfront distribution over HTTPS.
 
 📌 Key Lessons Learned:
+
 **Match Your S3 Bucket Name to Your Domain** – Ensures smooth integration with Route 53.
 
 **ACM Certificates Must Be in us-east-1 for CloudFront** – Regional mismatches cause issues.
