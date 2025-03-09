@@ -123,3 +123,5 @@ But now I have received another error code while testing, "Object of type decima
         }
 
 SUCCESS! The Lambda function is now communicating with the DynamoDB table and is updating the visitor count.
+
+### Creating API Gateway
