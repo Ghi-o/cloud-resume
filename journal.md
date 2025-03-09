@@ -125,3 +125,14 @@ But now I have received another error code while testing, "Object of type decima
 SUCCESS! The Lambda function is now communicating with the DynamoDB table and is updating the visitor count.
 
 ### Creating API Gateway
+
+- Create an API in AWS API Gateway
+- Select REST API
+- Name API; CloudResumeAPI
+- Integrate created lambda function into GET method
+- Enable CORS on resource
+- Deploy API and Test if Invoke URL comes back with correct code. make sure to add resource at the end of the invoke URL
+
+SUCCESS! Now I need to connect API to my website.
+
+### Connecting API to website
