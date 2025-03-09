@@ -48,3 +48,7 @@ Now I will create a CloudFront distribution to use the Certificate for DNS valid
 **Use CloudFront for HTTPS & Performance** – Improved global availability with caching.
 
 **Route 53 Directs Traffic, CloudFront Secures It** – Combining them correctly is key.
+
+## Day 3: Building the serverless API.
+
+I now will create a vistor counter that will be stored in a database(DynamoDB)
