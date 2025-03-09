@@ -73,8 +73,8 @@ i got an Access denied error message so i now need to update permissions to func
 
 But now I have received another error code while testing, "Object of type decimal is not JSON serializable"
 
-- I learned that DynamoDb stores numbers as decimal objects but JSON does not support Decimal
-- I need to update the function to convert decimal into int
+- I learned that DynamoDb stores numbers as decimal objects but JSON does not support Decimal.
+- I need to update the function to convert decimal into int.
   if isinstance(visit_count, Decimal):
   visit_count = int(visit_count)
 
