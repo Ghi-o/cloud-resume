@@ -128,7 +128,8 @@ SUCCESS! The Lambda function is now communicating with the DynamoDB table and is
 
 - Create an API in AWS API Gateway
 - Select REST API
-- Name API; CloudResumeAPI
+- Name API - CloudResumeAPI
+- create resource for visitor
 - Integrate created lambda function into GET method
 - Enable CORS on resource
 - Deploy API and Test if Invoke URL comes back with correct code. make sure to add resource at the end of the invoke URL
