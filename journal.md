@@ -51,4 +51,31 @@ Now I will create a CloudFront distribution to use the Certificate for DNS valid
 
 ## Day 3: Building the serverless API.
 
-I now will create a vistor counter that will be stored in a database(DynamoDB)
+I now will create a vistor counter that will be stored in a database(DynamoDB).
+
+In DynamoDB:
+
+- Created a table named visitor counter.
+- Add a visits item to table.
+
+I now will have to set up a lamdba function to read and update from the DynamoDB table.
+
+In Lambda:
+
+- Name function updateVisitorCount
+- Now create actual python function to initialize DynamoDB table; with the help of ChatGPT and Amazon Q,and AWS Boto3 documentation as i am not proficient in coding, but can read and understand what is happening.
+- test Code to make sure it can communicate with DynamoDb
+
+i got an Access denied error message so i now need to update permissions to function
+
+- Use DynamoDBFullaccess policy attached to Role
+- I now have access
+
+But now I have received another error code while testing, "Object of type decimal is not JSON serializable"
+
+- I learned that DynamoDb stores numbers as decimal objects but JSON does not support Decimal
+- I need to update the function to convert decimal into int
+- if isinstance(visit_count, Decimal):
+  visit_count = int(visit_count)
+
+SUCCESS! The Lambda function is now communicating with the DynamoDB table and is updating the visitor count.
