@@ -158,3 +158,9 @@ SUCCESS! Now I need to connect API to my website.
 - ✅ Waits for the response and converts it to JSON.
 - ✅ Updates the webpage dynamically with the visitor count.
 - ✅ Handles errors gracefully by showing "Error" instead of breaking the page.
+
+NICE it works, now i will send update my S3 bucket with the code.
+
+- PROBLEM: My new code was not updating, this was due to CloudFronts caching. SO i need to invalidate cache on the distribution.
+
+SUCCESS! My website now shows a visitor count! LETS GOOOOOO
