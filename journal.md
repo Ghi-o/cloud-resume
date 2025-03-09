@@ -75,22 +75,24 @@ But now I have received another error code while testing, "Object of type decima
 
 - I learned that DynamoDb stores numbers as decimal objects but JSON does not support Decimal
 - I need to update the function to convert decimal into int
-- if isinstance(visit_count, Decimal):
+  if isinstance(visit_count, Decimal):
   visit_count = int(visit_count)
 
-import json
-import boto3
-from decimal import Decimal
+---
 
-# Initialize DynamoDB resource
+        import json
+        import boto3
+        from decimal import Decimal
 
-dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('visitor-counter')
+        # Initialize DynamoDB resource
 
-def lambda_handler(event, context):
-try: # Retrieve the current visitor count
-response = table.get_item(Key={'id': 'visits'})
+        dynamodb = boto3.resource('dynamodb')
+        table = dynamodb.Table('visitor-counter')
 
+        def lambda_handler(event, context):
+        try: # Retrieve the current visitor count
+
+        response = table.get_item(Key={'id': 'visits'})
         # Get the current count or default to 0 if no record exists
         visit_count = response.get('Item', {}).get('count', 0)
 
@@ -119,6 +121,5 @@ response = table.get_item(Key={'id': 'visits'})
             'statusCode': 500,
             'body': json.dumps({'error': str(e)})
         }
-
 
 SUCCESS! The Lambda function is now communicating with the DynamoDB table and is updating the visitor count.
