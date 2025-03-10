@@ -207,3 +207,9 @@ Now uploading to s3 does work, but its manual, the whole point was for it to be 
 I also just broke my entire website, its not showing up anymore! I need to fix orgin folders.
 
 THE ENTIRE PROBLEM WAS THAT THE paths in the YAML file was wrong. I needed it to exactly match my github reposistory. lol
+
+I will now create a backend folder for this, this brings all my code in to versioning on github.
+
+- Created a backend folder with lambda function
+- update deploy to s3 workflow to exclude uploading backend folder
+- Create github actions workflow to update aws Lambda

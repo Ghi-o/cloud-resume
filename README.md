@@ -6,7 +6,9 @@ This is my Cloud Resume Project deployed on AWS using:
 - AWS CloudFront (HTTPS & CDN)
 - AWS Certificate Manager (TLS/SSL)
 - AWS Route 53 (Custom Domain)
-- Backend API (Coming Soon)
+- DynamoDB (Table Storage)
+- API Gateway
+- AWS Lambda
 
 🚀 **Live URL:** https://giokeels.com/
 
