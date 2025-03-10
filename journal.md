@@ -191,3 +191,19 @@ You push changes to GitHub (index.html, styles.css).
 4️⃣ It authenticates with AWS using secrets stored in GitHub.
 5️⃣ It syncs your latest website files to your S3 bucket.
 6️⃣ Your website is updated without manual intervention!
+
+Troubleshooting:
+
+I created the code and pushed it all to github, but my s3 bucket it not updating, nor is the workflow running.
+I added a manual trigger bcuz i got a error code while trying to manually run workflow:
+[gh workflow run deploy-s3.yml
+could not create workflow dispatch event: HTTP 422: Workflow does not have 'workflow_dispatch' trigger (https://api.github.com/repos/Ghi-o/cloud-resume/actions/workflows/148744512/dispatches)]
+
+Now uploading to s3 does work, but its manual, the whole point was for it to be automatic.
+
+- i also noticed github actions added ALL files to my s3 bucket, i dont want ALL files there so i have to update the code to exclude files.
+- also noticed everytime i update index.html, i need to invalidate on the CLoudFront distro, so i will have to add cloudfront invalidation to yaml also
+
+I also just broke my entire website, its not showing up anymore! I need to fix orgin folders.
+
+THE ENTIRE PROBLEM WAS THAT THE REF in the YAML file was wrong. lol
