@@ -184,3 +184,10 @@ CI/CD (Continuous Integration & Continuous Deployment) ensures that when you pus
 2. Backend Changes (lambda_function.py)
    - AWS Lambda function automatically updates when you push code changes.
      This removes the need for manual uploads and deployments.
+
+You push changes to GitHub (index.html, styles.css).
+2️⃣ GitHub Actions detects the change and triggers the workflow.
+3️⃣ The workflow runs in a fresh Ubuntu virtual machine.
+4️⃣ It authenticates with AWS using secrets stored in GitHub.
+5️⃣ It syncs your latest website files to your S3 bucket.
+6️⃣ Your website is updated without manual intervention!
