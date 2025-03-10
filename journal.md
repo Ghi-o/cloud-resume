@@ -139,6 +139,7 @@ SUCCESS! Now I need to connect API to my website.
 ### Connecting API to website
 
 - Adding javascript code to index.html
+  https://www.freecodecamp.org/news/how-to-make-api-calls-with-fetch
 
 ---
 
@@ -167,3 +168,19 @@ NICE it works, now i will send update my S3 bucket with the code.
 - PROBLEM: My new code was not updating, this was due to CloudFronts caching. SO i need to invalidate cache on the distribution.
 
 SUCCESS! My website now shows a visitor count! LETS GOOOOOO
+
+Most difficult, was setting up the lambda function to talk to DynamoDB. Then attaching code to Lambda to API gateway and figuring out exactly what CORS is.
+
+Security wise, The API is public and can be prone to malicious API requests, or ddos attacks. To mitigate this I can put an AWS WAF(web application firewall) in front of the API.
+
+# Day 4 Automation CI/CD
+
+Goal: Set up Continuous Integration & Continuous Deployment (CI/CD) so updates to your resume and backend are automatically deployed without manual intervention.
+
+CI/CD (Continuous Integration & Continuous Deployment) ensures that when you push changes to GitHub:
+
+1. Frontend Changes (index.html, styles.css)
+   - Website automatically uploads to S3 instead of manually using the AWS Console.
+2. Backend Changes (lambda_function.py)
+   - AWS Lambda function automatically updates when you push code changes.
+     This removes the need for manual uploads and deployments.
