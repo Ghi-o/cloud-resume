@@ -140,7 +140,8 @@ SUCCESS! Now I need to connect API to my website.
 
 - Adding javascript code to index.html
 
- <p>Visitor Count: <span id="visitor-count">Loading...</span></p>  
+' <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+
    <script>
   async function fetchVisitorCount() {
   try {
@@ -153,7 +154,7 @@ SUCCESS! Now I need to connect API to my website.
   }
   }
   fetchVisitorCount();
-  </script>
+  </script> '
 
 - ✅ Sends a GET request to your API Gateway.
 - ✅ Waits for the response and converts it to JSON.
