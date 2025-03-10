@@ -139,7 +139,8 @@ SUCCESS! Now I need to connect API to my website.
 ### Connecting API to website
 
 - Adding javascript code to index.html
-  <p>Visitor Count: <span id="visitor-count">Loading...</span></p>  
+
+ <p>Visitor Count: <span id="visitor-count">Loading...</span></p>  
    <script>
   async function fetchVisitorCount() {
   try {
