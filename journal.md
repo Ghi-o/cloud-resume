@@ -208,8 +208,16 @@ I also just broke my entire website, its not showing up anymore! I need to fix o
 
 THE ENTIRE PROBLEM WAS THAT THE paths in the YAML file was wrong. I needed it to exactly match my github reposistory. lol
 
+### Backend automation
+
 I will now create a backend folder for this, this brings all my code in to versioning on github.
 
 - Created a backend folder with lambda function
 - update deploy to s3 workflow to exclude uploading backend folder
 - Create github actions workflow to update aws Lambda
+
+Success, it all works, as I remembered the last troubleshooting soulutions for the workflow to upload to S3.
+
+# DAY 5 IAC with Terraform
+
+This will consist of defining my infracture as code in terraform. Terraform allows the infrastructure to be codified, repeatable, and easy to update across cloud providers.
