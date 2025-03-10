@@ -206,4 +206,4 @@ Now uploading to s3 does work, but its manual, the whole point was for it to be 
 
 I also just broke my entire website, its not showing up anymore! I need to fix orgin folders.
 
-THE ENTIRE PROBLEM WAS THAT THE REF in the YAML file was wrong. lol
+THE ENTIRE PROBLEM WAS THAT THE paths in the YAML file was wrong. I needed it to exactly match my github reposistory. lol
