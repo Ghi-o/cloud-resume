@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - "index.html"
-      - "styles.css"
+      - "frontend/index.html"
+      - "frontend/styles.css"
   workflow_dispatch:
 
 jobs:
@@ -25,4 +25,7 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy to S3
-        run: aws s3 sync . s3://giokeels.com --delete
+        run: aws s3 sync . s3://giokeels.com --delete --exclude ".git/*" --exclude ".github/*"
+
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id E2KEHCNBU58GU4 --paths "/*"
