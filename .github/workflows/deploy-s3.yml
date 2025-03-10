@@ -25,7 +25,7 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy to S3
-        run: aws s3 sync . s3://giokeels.com --delete --exclude ".git/*" --exclude ".github/*"
+        run: aws s3 sync . s3://giokeels.com --delete --exclude ".git/*" --exclude ".github/*" --exclude "backend/*"
 
       - name: Invalidate CloudFront Cache
         run: aws cloudfront create-invalidation --distribution-id E2KEHCNBU58GU4 --paths "/*"
