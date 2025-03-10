@@ -139,20 +139,20 @@ SUCCESS! Now I need to connect API to my website.
 ### Connecting API to website
 
 - Adding javascript code to index.html
-<p>Visitor Count: <span id="visitor-count">Loading...</span></p>
-<script>
-    async function fetchVisitorCount() {
-        try {
-            const response = await fetch("https://your-api-id.execute-api.us-west-1.amazonaws.com/prod/visitors");
-            const data = await response.json();
-            document.getElementById("visitor-count").textContent = data.visitorCount;
-        } catch (error) {
-            console.error("Error fetching visitor count:", error);
-            document.getElementById("visitor-count").textContent = "Error";
-        }
-    }
-    fetchVisitorCount();
-</script>
+  <p>Visitor Count: <span id="visitor-count">Loading...</span></p>  
+   <script>
+  async function fetchVisitorCount() {
+  try {
+  const response = await fetch("https://your-api-id.execute-api.us-west-1.amazonaws.com/prod/visitors");
+  const data = await response.json();
+  document.getElementById("visitor-count").textContent = data.visitorCount;
+  } catch (error) {
+  console.error("Error fetching visitor count:", error);
+  document.getElementById("visitor-count").textContent = "Error";
+  }
+  }
+  fetchVisitorCount();
+  </script>
 
 - ✅ Sends a GET request to your API Gateway.
 - ✅ Waits for the response and converts it to JSON.
