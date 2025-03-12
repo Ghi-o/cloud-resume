@@ -226,3 +226,10 @@ UPDATE: I am postponing the IAC with terraform because my friend has found a fla
 
 - I will need to track visitors based on their IP address.
 - I need the Lambda function to check the ip BEFORE updating the count.
+- I need to create a new dynamoDB table to store user ips.
+
+I can get the vistors ip through API gateway in the event object. the new code added is similar to getting items in the visitor counter table.
+
+SUCCESS, now the vistor count only updates by unique ip visitors. I am seeing another problem though... If i refresh the page on the same user that accesses the website, the visitor count shows "visitor_count". I need to have it countine to say the correct number.
+
+- it was a simple fix... i had quotes around visitor_count.... i just needed to remove it... haha.
