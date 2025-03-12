@@ -221,3 +221,8 @@ Success, it all works, as I remembered the last troubleshooting soulutions for t
 # DAY 5 IAC with Terraform
 
 This will consist of defining my infracture as code in terraform. Terraform allows the infrastructure to be codified, repeatable, and easy to update across cloud providers.
+
+UPDATE: I am postponing the IAC with terraform because my friend has found a flaw on my website regarding the vistor count. He found that as he keeps refreshing the page, the visitor count will continuosly update. I need to fix this.
+
+- I will need to track visitors based on their IP address.
+- I need the Lambda function to check the ip BEFORE updating the count.
