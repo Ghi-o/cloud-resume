@@ -32,7 +32,7 @@ def lambda_handler(event, context):
                     'Access-Control-Allow-Origin': '*',
                     "Content-Type": "application/json"
                 },
-                'body': json.dumps({'message':'Duplicate visit', 'visitorCount': 'visit_count'})
+                'body': json.dumps({'message':'Duplicate visit', 'visitorCount': visit_count})
             }
     
         # Increment the visitor count
